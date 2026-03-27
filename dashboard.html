@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EverestPoint Life OS | Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="dashboard-body life-body">
+  <div class="dashboard-shell life-shell">
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-top">
+        <a class="brand brand-lockup brand-dashboard" href="#dashboard" data-route-link="dashboard" aria-label="Go to dashboard">
+          <span class="brand-logo-wrap">
+            <img class="brand-logo-image" src="./assets/everestpoint-logo.svg" alt="EverestPoint logo">
+          </span>
+          <span class="brand-copy">
+            <strong>EverestPoint</strong>
+            <small>Life OS</small>
+          </span>
+        </a>
+        <button class="icon-button mobile-close" type="button" data-sidebar-close aria-label="Close sidebar">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="sidebar-group">
+        <span class="sidebar-label">Life System</span>
+        <button class="sidebar-link active" data-view-trigger="dashboard"><span>Dashboard</span></button>
+        <button class="sidebar-link" data-view-trigger="reset"><span>Weekly Reset</span></button>
+        <button class="sidebar-link" data-view-trigger="routines"><span>Routines</span></button>
+        <button class="sidebar-link" data-view-trigger="admin"><span>Life Admin</span></button>
+        <button class="sidebar-link" data-view-trigger="checkins"><span>Check-ins</span></button>
+        <button class="sidebar-link" data-view-trigger="areas"><span>Life Areas</span></button>
+        <button class="sidebar-link" data-view-trigger="decisions"><span>Decision Desk</span></button>
+        <button class="sidebar-link" data-view-trigger="exercises"><span>Exercises</span></button>
+        <button class="sidebar-link" data-view-trigger="paths"><span>Guided Paths</span></button>
+        <button class="sidebar-link" data-view-trigger="challenges"><span>Challenge Packs</span></button>
+        <button class="sidebar-link" data-view-trigger="resetkits"><span>Reset Kits</span></button>
+        <button class="sidebar-link" data-view-trigger="games"><span>Mind Games</span></button>
+        <button class="sidebar-link" data-view-trigger="patterns"><span>Pattern View</span></button>
+        <button class="sidebar-link" data-view-trigger="insights"><span>Saved Insights</span></button>
+        <button class="sidebar-link" data-view-trigger="wins"><span>Micro Wins</span></button>
+        <button class="sidebar-link" data-view-trigger="timeline"><span>Timeline</span></button>
+        <button class="sidebar-link" data-view-trigger="seasons"><span>Season Timeline</span></button>
+        <button class="sidebar-link" data-view-trigger="playbooks"><span>Playbooks</span></button>
+        <button class="sidebar-link" data-view-trigger="letters"><span>Private Letters</span></button>
+        <button class="sidebar-link" data-view-trigger="vault"><span>Vault</span></button>
+        <button class="sidebar-link" data-view-trigger="journal"><span>Journal</span></button>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-upgrade">
+          <span class="mini-label">EverestPoint Life OS</span>
+          <h3>Your premium personal system.</h3>
+          <p>Routines, resets, milestones, notes, and decisions all stay inside one calm operating layer.</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" data-sidebar-overlay></div>
+
+    <main class="dashboard-main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-toggle" type="button" data-sidebar-open aria-label="Open sidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <a class="topbar-brand" href="#dashboard" data-route-link="dashboard" aria-label="Go to dashboard">
+            <span class="brand-logo-wrap topbar-logo">
+              <img class="brand-logo-image" src="./assets/everestpoint-logo.svg" alt="EverestPoint logo">
+            </span>
+            <div>
+              <p class="topbar-eyebrow">EverestPoint Digital LLP</p>
+              <h1 class="topbar-title" data-page-title>Dashboard</h1>
+            </div>
+          </a>
+        </div>
+
+        <div class="topbar-right">
+          <div class="ai-badge live">Life OS local edition</div>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"></path>
+              <path d="M16.5 16.5 21 21"></path>
+            </svg>
+            <input type="search" placeholder="Search timeline, journal, playbooks..." data-global-search>
+          </label>
+          <a class="button button-secondary button-small" href="./index.html">Landing</a>
+        </div>
+      </header>
+
+      <section class="dashboard-view active" data-view="dashboard">
+        <div class="overview-hero">
+          <div class="overview-copy surface-card">
+            <span class="section-kicker">EverestPoint Life OS</span>
+            <h2>Clarity over chaos.</h2>
+            <p data-life-summary>See your routines, life admin, decisions, milestones, and weekly reset status in one place that actually remembers your life.</p>
+            <div class="hero-actions">
+              <button class="button button-primary" type="button" data-jump-view="reset">Start Weekly Reset</button>
+              <button class="button button-secondary" type="button" data-jump-view="decisions">Open Decision Desk</button>
+              <button class="button button-secondary" type="button" data-jump-view="exercises">Open Exercises</button>
+            </div>
+          </div>
+          <div class="overview-metrics">
+            <article class="metric-card"><span class="metric-value" data-metric-routines>0</span><span class="metric-label">Active routines</span></article>
+            <article class="metric-card"><span class="metric-value" data-metric-admin>0</span><span class="metric-label">Admin items</span></article>
+            <article class="metric-card"><span class="metric-value" data-metric-journal>0</span><span class="metric-label">Journal entries</span></article>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <article class="surface-card season-explainer-card">
+            <div class="surface-header">
+              <div>
+                <span class="mini-label">Core idea</span>
+                <h3>What seasons mean in Life OS</h3>
+              </div>
+            </div>
+            <div class="season-guide" data-season-explainer></div>
+          </article>
+        </div>
+
+        <div class="overview-grid">
+          <article class="surface-card">
+            <div class="surface-header">
+              <div>
+                <span class="mini-label">Life snapshot</span>
+                <h3>Your current baseline</h3>
+              </div>
+            </div>
+            <div class="profile-summary" data-profile-summary></div>
+          </article>
+
+          <article class="surface-card">
+            <div class="surface-header">
+              <div>
+                <span class="mini-label">How Life OS thinks</span>
+                <h3>Mood vs season</h3>
+              </div>
+            </div>
+            <div class="season-guide" data-season-guide></div>
+          </article>
+
+          <article class="surface-card">
+            <div class="surface-header">
+              <div>
+                <span class="mini-label">This week</span>
+                <h3>Immediate focus</h3>
+              </div>
+            </div>
+            <div class="saved-preview" data-home-focus></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="reset">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Weekly Reset</span>
+            <h2>Close loops before the next week starts.</h2>
+            <p>What this page does: helps you release mental clutter, decide what matters next, and make the next week feel lighter before it begins.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-reset-form>
+            <label><span>What felt heavy this week?</span><textarea name="heavy" placeholder="What drained you, what got ignored, what felt chaotic?"></textarea></label>
+            <label><span>What must be handled next week?</span><textarea name="mustDo" placeholder="Bills, calls, errands, deadlines, home tasks, appointments."></textarea></label>
+            <label><span>What would make next week feel calmer?</span><textarea name="calmer" placeholder="Cleaner mornings, less screen time, plan meals, fix sleep schedule, etc."></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Build Reset Plan</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Reset output</span>
+                <h3>Weekly reset guide</h3>
+              </div>
+              <span class="status-pill" data-reset-status>Ready</span>
+            </div>
+            <div class="growth-pack" data-reset-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="routines">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Routines</span>
+            <h2>Build routines you can actually keep.</h2>
+            <p>What this page does: helps you create repeatable habits that make daily life feel more stable instead of reactive.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-routine-form>
+            <label><span>Routine name</span><input type="text" name="title" placeholder="Morning reset"></label>
+            <label><span>Category</span><select name="category"><option>Health</option><option>Focus</option><option>Home</option><option>Money</option><option>Mindset</option></select></label>
+            <label><span>Frequency</span><select name="frequency"><option>Daily</option><option>Weekdays</option><option>3x weekly</option><option>Weekly</option></select></label>
+            <label><span>Why it matters</span><textarea name="why" placeholder="What gets better when this stays consistent?"></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Save Routine</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Routine board</span>
+                <h3>Current routines</h3>
+              </div>
+            </div>
+            <div class="idea-grid" data-routine-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="admin">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Life Admin</span>
+            <h2>Keep up with the boring things before they become stressful.</h2>
+            <p>What this page does: gives you one place for bills, renewals, appointments, and the tasks that quietly create stress when forgotten.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-admin-form>
+            <label><span>Admin item</span><input type="text" name="title" placeholder="Renew car insurance"></label>
+            <label><span>Area</span><select name="area"><option>Money</option><option>Home</option><option>Health</option><option>Travel</option><option>Paperwork</option></select></label>
+            <label><span>Due date</span><input type="date" name="dueDate"></label>
+            <label><span>Notes</span><textarea name="notes" placeholder="Any detail you need later."></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Add Admin Item</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Admin list</span>
+                <h3>Upcoming obligations</h3>
+              </div>
+            </div>
+            <div class="library-list" data-admin-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="checkins">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Check-ins</span>
+            <h2>Log how life feels before it blurs together.</h2>
+            <p>What this page does: tracks mood, energy, and season shifts so patterns become easier to notice over time.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-checkin-form>
+            <label><span>How do you feel today?</span><select name="mood"><option>Calm</option><option>Overwhelmed</option><option>Anxious</option><option>Hopeful</option><option>Tired</option><option>Focused</option><option>Numb</option></select></label>
+            <label><span>Energy</span><select name="energy"><option>Low</option><option>Medium</option><option>High</option></select></label>
+            <label><span>Current season</span><select name="season"><option>Rebuilding</option><option>Recovery</option><option>Transition</option><option>Growth</option><option>Stabilizing</option><option>Heavy</option></select></label>
+            <label><span>What is most true right now?</span><textarea name="note" placeholder="What feels loudest, clearest, or most important today?"></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Save Check-in</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div><span class="mini-label">Check-in log</span><h3>Recent emotional snapshots</h3></div>
+            </div>
+            <div class="library-list" data-checkin-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="areas">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Life Areas</span>
+            <h2>Keep every part of life visible, not just the loudest one.</h2>
+            <p>What this page does: separates life into areas like health, money, home, work, relationships, identity, and calm so you can see what needs attention.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-area-form>
+            <label><span>Area</span><select name="area"><option>Health</option><option>Relationships</option><option>Home</option><option>Money</option><option>Work</option><option>Identity</option><option>Calm</option></select></label>
+            <label><span>Current status</span><select name="status"><option>Needs attention</option><option>Holding steady</option><option>Improving</option><option>Messy but manageable</option></select></label>
+            <label><span>What is true here?</span><textarea name="note" placeholder="What is going well, what feels strained, or what needs a reset?"></textarea></label>
+            <div class="form-actions"><button class="button button-primary" type="submit">Save Life Area</button></div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header"><div><span class="mini-label">Area board</span><h3>Life area snapshot</h3></div></div>
+            <div class="idea-grid" data-area-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="decisions">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Decision Desk</span>
+            <h2>Think through big choices with more structure and less noise.</h2>
+            <p>Use this when you need clearer logic, clearer feelings, and a better explanation of what the score is actually trying to show you.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-decision-form>
+            <label><span>Decision title</span><input type="text" name="title" placeholder="Should I move apartments?"></label>
+            <label><span>Option A</span><input type="text" name="optionA" placeholder="Stay where I am"></label>
+            <label><span>Option B</span><input type="text" name="optionB" placeholder="Move in July"></label>
+            <label><span>How important is peace / calm?</span><select name="peaceWeight"><option value="1">1 - low</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - highest</option></select></label>
+            <label><span>How important is growth / opportunity?</span><select name="growthWeight"><option value="1">1 - low</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - highest</option></select></label>
+            <label><span>How important is environment / fit?</span><select name="environmentWeight"><option value="1">1 - low</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - highest</option></select></label>
+            <label><span>Option A: peace / calm score</span><select name="optionAPeace"><option value="1">1 - weak</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - strong</option></select></label>
+            <label><span>Option A: growth / opportunity score</span><select name="optionAGrowth"><option value="1">1 - weak</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - strong</option></select></label>
+            <label><span>Option A: environment / fit score</span><select name="optionAEnvironment"><option value="1">1 - weak</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - strong</option></select></label>
+            <label><span>Option B: peace / calm score</span><select name="optionBPeace"><option value="1">1 - weak</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - strong</option></select></label>
+            <label><span>Option B: growth / opportunity score</span><select name="optionBGrowth"><option value="1">1 - weak</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - strong</option></select></label>
+            <label><span>Option B: environment / fit score</span><select name="optionBEnvironment"><option value="1">1 - weak</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - strong</option></select></label>
+            <label><span>Which option are you emotionally leaning toward right now?</span><select name="lean"><option value="A">Option A</option><option value="B">Option B</option><option value="split">I feel split</option></select></label>
+            <label><span>How do you want life to feel after this choice?</span><textarea name="desiredFeel" placeholder="More calm, more confidence, more growth, healthier environment, etc."></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Score Decision</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Decision output</span>
+                <h3>Recommendation board</h3>
+              </div>
+              <span class="status-pill" data-decision-status>Ready</span>
+            </div>
+            <div class="growth-pack" data-decision-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="exercises">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Exercises</span>
+            <h2>Guided prompts, fill-in-the-blank activities, and mental reset tools.</h2>
+            <p>Use these when you feel stuck, overwhelmed, scattered, or like you need a structured way to think instead of doom-scrolling or spiraling.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-exercise-form>
+            <label><span>Category</span><select name="category"><option>Mental clarity</option><option>Weekly reset</option><option>Decision making</option><option>Self-awareness</option><option>Routine repair</option><option>Relationships</option><option>Life direction</option><option>Low-energy support</option><option>Poem reflection</option></select></label>
+            <label><span>Current feeling</span><input type="text" name="feeling" placeholder="Overwhelmed, behind, disconnected, uncertain..."></label>
+            <label><span>What do you need most?</span><input type="text" name="need" placeholder="Clarity, calm, confidence, structure, release..."></label>
+            <label><span>Current season</span><select name="season"><option value="">Use my saved season</option><option>Rebuilding</option><option>Recovery</option><option>Transition</option><option>Growth</option><option>Stabilizing</option><option>Heavy</option></select></label>
+            <label><span>Reflection style</span><select name="mode"><option>Gentle</option><option>Balanced</option><option>Deeper</option><option>Hard truth</option></select></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Generate Exercise</button>
+              <button class="button button-secondary" type="button" data-regenerate-exercise>Regenerate</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Exercise output</span>
+                <h3>Clarity activity</h3>
+              </div>
+              <span class="status-pill" data-exercise-status>Ready</span>
+            </div>
+            <div class="caption-stack" data-exercise-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="paths">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Guided Paths</span>
+            <h2>Follow a deeper track when one exercise is not enough.</h2>
+            <p>What this page does: gives you multi-step paths for moments like overwhelm, self-trust issues, breakup recovery, or getting life back together.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-path-form>
+            <label><span>Path</span><select name="path"><option>Overwhelm Reset</option><option>Self-Trust Rebuild</option><option>Breakup Recovery</option><option>Getting Life Back Together</option></select></label>
+            <label><span>Current season</span><select name="season"><option>Rebuilding</option><option>Recovery</option><option>Transition</option><option>Growth</option><option>Stabilizing</option><option>Heavy</option></select></label>
+            <label><span>Intensity</span><select name="intensity"><option>Gentle</option><option>Steady</option><option>Deeper</option></select></label>
+            <div class="form-actions"><button class="button button-primary" type="submit">Build Guided Path</button></div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header"><div><span class="mini-label">Path output</span><h3>Multi-step track</h3></div><span class="status-pill" data-path-status>Ready</span></div>
+            <div class="growth-pack" data-path-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="challenges">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Challenge Packs</span>
+            <h2>Premium-style guided tracks that make the subscription feel worth keeping.</h2>
+            <p>Challenge packs turn Life OS into a real guided system instead of just a place to store information. Pick a track, name the season you are in, and the system will build a more relevant path instead of giving you generic self-help.</p>
+          </div>
+        </div>
+        <div class="overview-grid challenge-intro-grid">
+          <article class="surface-card">
+            <div class="surface-header">
+              <div>
+                <span class="mini-label">How this works</span>
+                <h3>Why challenges feel different</h3>
+              </div>
+            </div>
+            <div class="season-guide" data-challenge-explainer></div>
+          </article>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-challenge-form>
+            <label><span>Track</span><select name="track"><option>7-Day Mental Reset</option><option>14-Day Routine Rebuild</option><option>7-Day Self-Trust Reset</option><option>Clean Slate Week</option><option>Burnout Recovery Reset</option><option>Sunday Reset System</option></select></label>
+            <label><span>What season are you in?</span><input type="text" name="season" placeholder="Burned out, rebuilding, uncertain, restarting, trying to get stable..."></label>
+            <label><span>What do you want this challenge to strengthen?</span><select name="focus"><option>Clarity</option><option>Consistency</option><option>Confidence</option><option>Calm</option><option>Energy</option><option>Boundaries</option><option>Follow-through</option><option>Direction</option></select></label>
+            <label><span>What pace feels realistic?</span><select name="pace"><option>Gentle</option><option>Steady</option><option>Focused</option></select></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Build Challenge Pack</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Challenge pack</span>
+                <h3>Guided sequence</h3>
+              </div>
+              <span class="status-pill" data-challenge-status>Ready</span>
+            </div>
+            <div class="growth-pack" data-challenge-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="resetkits">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Reset Kits</span>
+            <h2>Open a ready-made pack when life gets messy fast.</h2>
+            <p>What this page does: gives you prebuilt support for specific moments so you do not have to figure everything out from scratch.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-resetkit-form>
+            <label><span>Kit</span><select name="kit"><option>Bad Day</option><option>Sunday Reset</option><option>After a Hard Conversation</option><option>When I Feel Behind</option><option>When Life Feels Messy</option></select></label>
+            <div class="form-actions"><button class="button button-primary" type="submit">Open Reset Kit</button></div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header"><div><span class="mini-label">Reset kit</span><h3>Support pack</h3></div><span class="status-pill" data-resetkit-status>Ready</span></div>
+            <div class="growth-pack" data-resetkit-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="games">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Mind Games</span>
+            <h2>Use small interactive tools when reflection feels heavy.</h2>
+            <p>What this page does: turns mental sorting into a lower-pressure activity so it feels easier to open up and see where your head is at.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-game-form>
+            <label><span>Interactive tool</span><select name="game"><option>Season Finder</option><option>Control vs Release</option><option>Reset Roulette</option></select></label>
+            <label><span>What feels most true right now?</span><input type="text" name="input" placeholder="I feel stuck, I keep overthinking, everything feels loud..."></label>
+            <div class="form-actions"><button class="button button-primary" type="submit">Run Tool</button></div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header"><div><span class="mini-label">Interactive result</span><h3>Clarity tool</h3></div><span class="status-pill" data-game-status>Ready</span></div>
+            <div class="growth-pack" data-game-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="patterns">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Pattern View</span>
+            <h2>Notice what keeps repeating before it quietly runs your life.</h2>
+            <p>What this page does: shows recurring moods, seasons, stuck points, and pressure themes across your saved entries.</p>
+          </div>
+        </div>
+        <div class="surface-card tool-results">
+          <div class="results-header"><div><span class="mini-label">Pattern board</span><h3>What keeps repeating</h3></div></div>
+          <div class="growth-pack" data-pattern-results></div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="insights">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Saved Insights</span>
+            <h2>Pull meaning out of what you keep writing down.</h2>
+            <p>What this page does: reflects repeated themes back to you so your life tracker becomes more than storage.</p>
+          </div>
+        </div>
+        <div class="surface-card tool-results">
+          <div class="results-header"><div><span class="mini-label">Insight board</span><h3>What Life OS is noticing</h3></div></div>
+          <div class="growth-pack" data-insight-results></div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="wins">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Micro Wins</span>
+            <h2>Keep proof of progress, even when it is small.</h2>
+            <p>What this page does: helps you collect little wins so progress does not disappear just because it was not dramatic.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-win-form>
+            <label><span>Win</span><input type="text" name="title" placeholder="I cleaned my room instead of spiraling"></label>
+            <label><span>Area</span><select name="area"><option>Health</option><option>Home</option><option>Work</option><option>Relationships</option><option>Mindset</option><option>Money</option></select></label>
+            <label><span>Why it mattered</span><textarea name="note" placeholder="Why this counts, even if it looked small from the outside."></textarea></label>
+            <div class="form-actions"><button class="button button-primary" type="submit">Save Win</button></div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header"><div><span class="mini-label">Win log</span><h3>Proof that you are moving</h3></div></div>
+            <div class="library-list" data-win-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="timeline">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Timeline</span>
+            <h2>Keep a memory of the weeks, wins, and turning points that shape your life.</h2>
+            <p>What this page does: helps you remember growth, hard seasons, and milestones so your life has visible context over time.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-timeline-form>
+            <label><span>Milestone</span><input type="text" name="title" placeholder="Started therapy again"></label>
+            <label><span>Date</span><input type="date" name="date"></label>
+            <label><span>Why it mattered</span><textarea name="notes" placeholder="What changed, what you learned, or what this meant."></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Add to Timeline</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Timeline</span>
+                <h3>Life milestones</h3>
+              </div>
+            </div>
+            <div class="library-list" data-timeline-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="seasons">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Season Timeline</span>
+            <h2>Track the chapters you have been living through.</h2>
+            <p>What this page does: helps you log what season you were in, when it shifted, and what changed with it.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-season-form>
+            <label><span>Season</span><select name="season"><option>Rebuilding</option><option>Recovery</option><option>Transition</option><option>Growth</option><option>Stabilizing</option><option>Heavy</option></select></label>
+            <label><span>When did it begin?</span><input type="date" name="date"></label>
+            <label><span>What changed?</span><textarea name="notes" placeholder="What shifted in your life, energy, or mindset?"></textarea></label>
+            <div class="form-actions"><button class="button button-primary" type="submit">Save Season</button></div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header"><div><span class="mini-label">Season history</span><h3>Season changes over time</h3></div></div>
+            <div class="library-list" data-season-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="playbooks">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Playbooks</span>
+            <h2>Save your own systems for the moments that repeat.</h2>
+            <p>What this page does: turns repeat situations like bad days, Sunday resets, or travel prep into personal systems you can reuse.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-playbook-form>
+            <label><span>Playbook title</span><input type="text" name="title" placeholder="Bad day reset"></label>
+            <label><span>When do you use it?</span><input type="text" name="trigger" placeholder="When everything feels behind"></label>
+            <label><span>Steps</span><textarea name="steps" placeholder="Write each step on a new line."></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Save Playbook</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Saved systems</span>
+                <h3>Personal playbooks</h3>
+              </div>
+            </div>
+            <div class="caption-stack" data-playbook-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="letters">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Private Letters</span>
+            <h2>Write what you need to say without needing to send it.</h2>
+            <p>What this page does: gives you a safe place for letters to yourself, future-you notes, closure letters, and unsent honesty.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-letter-form>
+            <label><span>Letter type</span><select name="type"><option>Letter to myself</option><option>Future self note</option><option>What I wish I could say</option><option>Closure letter I won't send</option></select></label>
+            <label><span>Title</span><input type="text" name="title" placeholder="A note to the version of me that is trying"></label>
+            <label><span>Letter</span><textarea name="body" placeholder="Write what feels true, even if it is messy."></textarea></label>
+            <div class="form-actions"><button class="button button-primary" type="submit">Save Letter</button></div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header"><div><span class="mini-label">Private letters</span><h3>Saved writing</h3></div></div>
+            <div class="library-list" data-letter-results></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="vault">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Vault</span>
+            <h2>Keep the most helpful things in one personal library.</h2>
+            <p>What this page does: gathers your strongest exercises, resets, letters, wins, decisions, and guided tools into one place you can come back to.</p>
+          </div>
+        </div>
+        <div class="surface-card tool-results">
+          <div class="results-header"><div><span class="mini-label">Saved library</span><h3>Your strongest material</h3></div></div>
+          <div class="library-list" data-vault-results></div>
+        </div>
+      </section>
+
+      <section class="dashboard-view" data-view="journal">
+        <div class="view-header">
+          <div>
+            <span class="section-kicker">Journal</span>
+            <h2>Keep short reflections that build real personal context over time.</h2>
+            <p>What this page does: gives you a place to capture what you felt, learned, or noticed so your weeks do not blur together.</p>
+          </div>
+        </div>
+        <div class="tool-layout">
+          <form class="surface-card tool-form" data-journal-form>
+            <label><span>Title</span><input type="text" name="title" placeholder="A calmer Tuesday"></label>
+            <label><span>Mood</span><select name="mood"><option>Calm</option><option>Tired</option><option>Focused</option><option>Overwhelmed</option><option>Hopeful</option></select></label>
+            <label><span>Entry</span><textarea name="entry" placeholder="What happened, what you noticed, and what you want to remember."></textarea></label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Save Entry</button>
+            </div>
+          </form>
+          <div class="surface-card tool-results">
+            <div class="results-header">
+              <div>
+                <span class="mini-label">Journal log</span>
+                <h3>Recent entries</h3>
+              </div>
+            </div>
+            <div class="library-list" data-journal-results></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" data-toast></div>
+  <script src="./script.js"></script>
+</body>
+</html>
